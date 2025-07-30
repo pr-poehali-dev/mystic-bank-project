@@ -6,7 +6,7 @@ export default {
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./src/**/*.{ts,tsx}"
 	],
 	prefix: "",
 	theme: {
@@ -18,7 +18,20 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'mystery': ['Dancing Script', 'cursive'],
+				'journal': ['Merriweather', 'serif'],
+				'handwritten': ['Caveat', 'cursive'],
+			},
 			colors: {
+				mystery: {
+					forest: '#228B22',
+					brown: '#8B4513',
+					gold: '#DAA520',
+					parchment: '#F5F5DC',
+					darkGreen: '#2F4F2F',
+					oldPaper: '#FDF5E6',
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
