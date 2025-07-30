@@ -29,8 +29,15 @@ const MysticalCalculator = () => {
         
         <Card className="bg-mystery-parchment/95 border-mystery-gold border-3">
           <CardHeader className="text-center">
+            <div className="flex justify-center mb-4">
+              <img 
+                src="/img/0c322ae3-6e29-4f14-b63e-5880744a2927.jpg" 
+                alt="Waddles" 
+                className="w-16 h-16 rounded-full border-4 border-mystery-gold object-cover hover:bounce"
+              />
+            </div>
             <CardTitle className="font-handwritten text-2xl text-mystery-brown">
-              Узнай свои волшебные проценты!
+              Узнай свои волшебные проценты с Вадой!
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">

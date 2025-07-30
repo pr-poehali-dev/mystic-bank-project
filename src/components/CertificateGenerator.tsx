@@ -9,7 +9,13 @@ const CertificateGenerator = () => {
   const [certificateName, setCertificateName] = useState("");
 
   const generateCertificate = () => {
-    const avatars = ["🕵️‍♂️ Диппер", "🌈 Мэйбл", "🎩 Стэн", "📖 Форд", "🐷 Вада"];
+    const avatars = [
+      { name: "🕵️‍♂️ Диппер", image: "/img/c5590e69-91de-4230-9777-052b08dfd5f5.jpg" },
+      { name: "🌈 Мэйбл", image: "/img/4c0618e6-a52a-4903-919c-dfc23a82ac69.jpg" },
+      { name: "🎩 Стэн", image: "/img/dbce1911-9bea-4a42-bd5b-02edfd9b73fe.jpg" },
+      { name: "🐷 Вада", image: "/img/0c322ae3-6e29-4f14-b63e-5880744a2927.jpg" },
+      { name: "🧙‍♂️ Гномы", image: "/img/a0423e84-f403-4196-9b8e-6ff876d1d26b.jpg" }
+    ];
     const randomAvatar = avatars[Math.floor(Math.random() * avatars.length)];
     setSelectedAvatar(randomAvatar);
   };
@@ -52,7 +58,13 @@ const CertificateGenerator = () => {
             {selectedAvatar && certificateName && (
               <Card className="bg-mystery-forest/10 border-mystery-forest border-2">
                 <CardContent className="p-6 text-center">
-                  <div className="text-6xl mb-4">{selectedAvatar.split(' ')[0]}</div>
+                  <div className="flex justify-center mb-4">
+                    <img 
+                      src={selectedAvatar.image} 
+                      alt={selectedAvatar.name}
+                      className="w-20 h-20 rounded-full border-4 border-mystery-gold object-cover"
+                    />
+                  </div>
                   <h3 className="font-mystery text-2xl text-mystery-forest mb-2">
                     Сертификат Тайного Вкладчика
                   </h3>
@@ -64,7 +76,7 @@ const CertificateGenerator = () => {
                   </p>
                   <p className="font-handwritten text-lg text-mystery-brown mb-4">
                     является почетным клиентом МистериКэш<br/>
-                    под покровительством {selectedAvatar}
+                    под покровительством {selectedAvatar.name}
                   </p>
                   <p className="text-sm text-mystery-darkGreen">
                     Дата выдачи: {new Date().toLocaleDateString('ru-RU')}

@@ -10,11 +10,18 @@ const ConsultationForm = () => {
       <div className="max-w-2xl mx-auto">
         <Card className="bg-mystery-parchment/95 border-mystery-brown border-3">
           <CardHeader className="text-center">
+            <div className="flex justify-center mb-4">
+              <img 
+                src="/img/dbce1911-9bea-4a42-bd5b-02edfd9b73fe.jpg" 
+                alt="Stan Pines" 
+                className="w-20 h-20 rounded-full border-4 border-mystery-brown object-cover hover:scale-110 transition-transform"
+              />
+            </div>
             <CardTitle className="font-mystery text-3xl text-mystery-forest">
               📞 Консультация с Агентом Станом
             </CardTitle>
             <CardDescription className="font-handwritten text-lg text-mystery-brown">
-              Получите сертификат тайного вкладчика!
+              "Доверьтесь профессионалу! Получите сертификат тайного вкладчика!"
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
